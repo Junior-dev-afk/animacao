@@ -1,0 +1,35 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.background{
+    width: 300%;
+    height: 100%;
+    background-image: url('../background/background.png');
+    background-size: 33.333333333% 100%; /* Preenche verticalmente */
+    background-repeat: repeat-x;
+    position: absolute;
+    left : 0px;
+}
+
+.barra_vida{
+    width: 80px;
+    height: 8px;
+    outline: 1px solid black;
+    background-color: rgb(13, 158, 20);
+    position: fixed;
+}
+

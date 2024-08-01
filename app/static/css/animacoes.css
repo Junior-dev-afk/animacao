@@ -1,0 +1,401 @@
+:root{
+    --tamanho : 120px;
+}
+
+#player{
+    position: absolute;
+    width: var(--tamanho);
+    height: var(--tamanho);
+}
+
+.clone{
+    position: fixed;
+    width: var(--tamanho);
+    height: var(--tamanho);
+}
+
+
+.walk_r{
+    animation: walk infinite 700ms linear;
+}
+
+.walk_l{
+    transform: scaleX(-1);
+    animation: walk infinite 700ms linear;
+}
+
+.run_r{
+    animation: run infinite 500ms linear;
+}
+
+.run_l{
+    transform: scaleX(-1);
+    animation: run infinite 500ms linear;
+}
+
+.stop_r{
+    animation: stop infinite 500ms linear;
+}
+
+.stop_l{
+    transform: scaleX(-1);
+    animation: stop infinite 500ms linear;
+}
+
+.ataque_1_r {
+    animation: ataque_1_r step-start 400ms; 
+}
+
+.ataque_1_l {
+    transform: scaleX(-1);
+    animation: ataque_1_l step-start 400ms; 
+}
+
+.ataque_2_r {
+    animation: ataque_2_r step-start 500ms; 
+}
+
+.ataque_2_l {
+    transform: scaleX(-1);
+    animation: ataque_2_l step-start 500ms; 
+}
+
+.jump_1_r {
+    animation: jump step-start 1s; 
+}
+
+.jump_1_l {
+    transform: scaleX(-1);
+    animation: jump step-start 1s; 
+}
+
+.morrendo_l {
+    transform: scaleX(-1);
+    animation: morrer 0.7s step-start;
+}
+
+.morrendo_r {
+    animation: morrer 0.7s step-start;
+}
+
+.morto_r {
+    background: url("../gifs/morrendo/morrer_4.png") no-repeat center center / contain;
+}
+
+.morto_l {
+    transform: scaleX(-1);
+    background: url("../gifs/morrendo/morrer_4.png") no-repeat center center / contain;
+}
+
+.esquiva_l {
+    transform: scaleX(-1);
+    background: url("../gifs/esquiva/esquiva.png") no-repeat center center / contain;   
+}
+
+.esquiva_r {
+    background: url("../gifs/esquiva/esquiva.png") no-repeat center center / contain;   
+}
+
+@keyframes morrer {
+    0%{
+        width: var(--tamanho);
+        height: calc(var(--tamanho));
+    }
+
+    20%{
+        width: var(--tamanho);
+        height: calc(var(--tamanho));
+        background: url("../gifs/morrendo/morrer_1.png") no-repeat center center / contain;
+    }
+
+    40%{
+        width: var(--tamanho);
+        height: calc(var(--tamanho) - 15px);
+        background: url("../gifs/morrendo/morrer_1.png") no-repeat center center / contain;
+    }
+
+    60%{
+        width: var(--tamanho);
+        height: calc(var(--tamanho) - 15px);
+        background: url("../gifs/morrendo/morrer_2.png") no-repeat center center / contain;
+    }
+
+    80%{
+        width: calc(var(--tamanho) + 30px);
+        height: calc(var(--tamanho) - 0px);
+        background: url("../gifs/morrendo/morrer_3.png") no-repeat center center / contain;
+    }
+
+    100%{
+        width: calc(var(--tamanho) + 30px);
+        height: calc(var(--tamanho) - 0px);
+        background: url("../gifs/morrendo/morrer_4.png") no-repeat center center / contain;
+    }
+}
+
+@keyframes walk {
+    0%{
+        background: url("../gifs/andando/andando_1.png") no-repeat center center / contain;
+    }
+
+    16%{
+        background: url("../gifs/andando/andando_2.png") no-repeat center center / contain;
+    } 
+
+    33%{
+        background: url("../gifs/andando/andando_3.png") no-repeat center center / contain;
+    }
+
+    50%{
+        background: url("../gifs/andando/andando_4.png") no-repeat center center / contain;
+    }
+
+    63%{
+        background: url("../gifs/andando/andando_5.png") no-repeat center center / contain;
+    }
+
+    80%{
+        background: url("../gifs/andando/andando_6.png") no-repeat center center / contain;
+    }
+
+    100%{
+        background: url("../gifs/andando/andando_7.png") no-repeat center center / contain;
+    }
+}
+
+@keyframes run {
+    0%{
+        background: url("../gifs/run/run_2.png") no-repeat center center / contain;
+    }
+
+    14%{
+        background: url("../gifs/run/run_2.png") no-repeat center center / contain;
+    }
+
+    29%{
+        background: url("../gifs/run/run_3.png") no-repeat center center / contain;
+    }
+
+    43%{
+        background: url("../gifs/run/run_4.png") no-repeat center center / contain;
+    }
+
+    57%{
+        background: url("../gifs/run/run_5.png") no-repeat center center / contain;
+    }
+
+    71%{
+        background: url("../gifs/run/run_6.png") no-repeat center center / contain;
+    }
+
+    85%{
+        background: url("../gifs/run/run_7.png") no-repeat center center / contain;
+    }
+
+    100%{
+        background: url("../gifs/run/run_8.png") no-repeat center center / contain;
+    }
+}
+
+@keyframes stop {
+    0%{
+        background: url("../gifs/parada/parada_1.png") no-repeat center center / contain;
+    }
+
+    20%{
+        background: url("../gifs/parada/parada_2.png") no-repeat center center / contain;
+    }
+
+    40%{
+        background: url("../gifs/parada/parada_3.png") no-repeat center center / contain;
+    }
+
+    60%{
+        background: url("../gifs/parada/parada_4.png") no-repeat center center / contain;
+    }
+
+    80%{
+        background: url("../gifs/parada/parada_5.png") no-repeat center center / contain;
+    }
+
+    100%{
+        background: url("../gifs/parada/parada_6.png") no-repeat center center / contain;
+    }
+}
+
+@keyframes ataque_1_r {
+
+    0%{
+        background: url("../gifs/ataque_1/ataque_3_1.png") no-repeat center center / contain;
+    }
+
+    33% {
+        width: 170px;
+        height: 170px;
+        margin-left: -20px;
+        background: url("../gifs/ataque_1/ataque_1_1.png") no-repeat center center / contain;
+    }
+
+    66%{
+        width: 170px;
+        height: 170px;
+        margin-left: 20px;
+        background: url("../gifs/ataque_1/ataque_2_1.png") no-repeat center center / contain;
+    }
+
+    100%{
+        width: 110px;
+        height: 110px;
+        background: url("../gifs/ataque_1/ataque_3_1.png") no-repeat center center / contain;
+    }
+}
+
+@keyframes ataque_1_l {
+
+    0%{
+        background: url("../gifs/ataque_1/ataque_3_1.png") no-repeat center center / contain;
+    }
+
+    33% {
+        width: 170px;
+        height: 170px;
+        margin-left: -23px;
+        background: url("../gifs/ataque_1/ataque_1_1.png") no-repeat center center / contain;
+    }
+
+    66%{
+        width: 170px;
+        height: 170px;
+        margin-left: -60px;
+        background: url("../gifs/ataque_1/ataque_2_1.png") no-repeat center center / contain;
+    }
+
+    100%{
+        width: 110px;
+        height: 110px;
+        margin-left: 8px;
+        background: url("../gifs/ataque_1/ataque_3_1.png") no-repeat center center / contain;
+    }
+}
+
+@keyframes ataque_2_r {
+    0%{
+        width: var(--tamanho);
+        height: var(--tamanho);
+        background: url("../gifs/ataque_2/ataque_2_1.png") no-repeat center center / contain;
+    }
+
+    20%{
+        width: var(--tamanho);
+        height: var(--tamanho);
+        margin-bottom: 0px;
+        margin-left: 0px;
+        background: url("../gifs/ataque_2/ataque_2_1.png") no-repeat center center / contain;
+    }
+
+    40%{
+        width: var(--tamanho);
+        height: var(--tamanho);
+        margin-bottom: 0px;
+        margin-left: 0px;
+        background: url("../gifs/ataque_2/ataque_2_2.png") no-repeat center center / contain;
+    }
+
+    60%{
+        width: 170px;
+        height: 170px;
+        margin-bottom: -27px;
+        margin-left: 21px;
+        background: url("../gifs/ataque_2/ataque_2_3.png") no-repeat center center / contain;
+    }
+
+    100%{
+        width: 160px;
+        height: 160px;
+        margin-bottom: -17px;
+        margin-left: 25px;
+        background: url("../gifs/ataque_2/ataque_2_4.png") no-repeat center center / contain;
+    }
+}
+
+@keyframes ataque_2_l {
+    0%{
+        width: var(--tamanho);
+        height: var(--tamanho);
+        background: url("../gifs/ataque_2/ataque_2_1.png") no-repeat center center / contain;
+    }
+
+    20%{
+        width: var(--tamanho);
+        height: var(--tamanho);
+        margin-bottom: 0px;
+        margin-left: 0px;
+        background: url("../gifs/ataque_2/ataque_2_1.png") no-repeat center center / contain;
+    }
+
+    40%{
+        width: var(--tamanho);
+        height: var(--tamanho);
+        margin-bottom: 0px;
+        margin-left: 0px;
+        background: url("../gifs/ataque_2/ataque_2_2.png") no-repeat center center / contain;
+    }
+
+    60%{
+        width: 170px;
+        height: 170px;
+        margin-bottom: -27px;
+        margin-left: -71px;
+        background: url("../gifs/ataque_2/ataque_2_3.png") no-repeat center center / contain;
+    }
+
+    100%{
+        width: 160px;
+        height: 160px;
+        margin-bottom: -17px;
+        margin-left: -71px;
+        background: url("../gifs/ataque_2/ataque_2_4.png") no-repeat center center / contain;
+    }
+}
+
+@keyframes jump {
+    0%{  
+        background: url("../gifs/pulo/jump_1.png") no-repeat center center / contain;
+    }
+
+    7%{
+        background: url("../gifs/pulo/jump_1.png") no-repeat center center / contain;
+    }
+
+    14%{
+        background: url("../gifs/pulo/jump_2.png") no-repeat center center / contain;
+    }
+
+    21%{
+        background: url("../gifs/pulo/jump_3.png") no-repeat center center / contain;
+    }
+
+    29%{
+        background: url("../gifs/pulo/jump_4.png") no-repeat center center / contain;
+    }
+
+    37%{
+        background: url("../gifs/pulo/jump_5.png") no-repeat center center / contain;
+    }
+
+    50%{
+        background: url("../gifs/pulo/jump_6.png") no-repeat center center / contain;
+    }
+
+    77%{
+        background: url("../gifs/pulo/jump_7.png") no-repeat center center / contain;
+    }
+
+    88%{
+        background: url("../gifs/pulo/jump_8.png") no-repeat center center / contain;
+    }
+
+    100%{
+        background: url("../gifs/pulo/jump_2.png") no-repeat center center / contain;
+    }
+}
